@@ -9,6 +9,7 @@ in some form, hence it is also important to understand alternative(s) to the reg
 buffered I/O libraries.
 tags: kernel message logging, linux process abstraction.
 ### 1.1 Message logging from the kernel
+-----
 Refer: [Logging via `printk`](https://www.kernel.org/doc/html/next/core-api/printk-basics.html):
 Implemented via `printk(log_level "format string", *args)`.
 Kernel logs are by default printed to the kernel log buffer, which is a ring buffer exported to userspace through `/dev/kmsg`. Linux provides the `dmesg` shell command (implemented as a binary - search via `type -a dmesg`) that returns the entries logged in the kernel log buffer. There are 11 logging levels, specified via log_level `KERN_<logType>`. 
@@ -28,8 +29,8 @@ Linux kernel also provides alias functions `pr_*()` for the various `printk` log
 
 Q4. How to define/set these options in the linux kernel? A: Refer https://stackoverflow.com/questions/11631968/how-to-enable-dynamic-debugging-in-the-linux-kernel 
 
------
 ### 1.2 Linux Process Abstraction
+----
 Refer: [Process representation](https://developer.ibm.com/tutorials/l-linux-process-management/)
 
 In Linux, a process is represented by the large struct `task_struct` that contains all necessary data to represent a process, including data for process-related optimiations and relationships to other processes. It is found in `/linux/include/linux/sched.h.`. The reason for its large size (around 1.7kb on a 32bit machine) is required to represent its "multi-functional" nature, i.e. that a process is a common abstraction relevant to most kernel contexts and mechanisms. `task_struct` contains various attributes, the details of which are explored in the ... article [].
@@ -49,12 +50,7 @@ Q3a. Are Kernel Threads also stored as `task_struct` objects?
 A: No. Kernel Threads are stored as a `thread_struct` attribute in the `task_struct` object, thereby linking threads to a process.
 Q3b. Are threads associated with a single process? 
 Q3c. What is the thread stack?
-------
-------
+
 ## 2. IOCTL: ioctl drivers
-
-
-
-------
-3. PROC:
+## 3. PROC:
 

@@ -25,6 +25,8 @@ cd
 The module.c file requires `__init` and `__exit` functions.
 Q1. Are there restrictions on the signatures of these functions?
 
+### Modules and Command-Line arguments. 
+
 [Makefile structure](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/Documentation/kbuild/makefiles.rst)
 
 [Compiling a Module](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/Documentation/kbuild/modules.rst)

@@ -40,7 +40,7 @@ static int __init lkm1_init(void){
      * next_task() is defined in https://elixir.bootlin.com/linux/v6.1/source/include/linux/sched/signal.h#L647
      * init_task is a global extern var in https://elixir.bootlin.com/linux/v6.1/source/include/linux/sched/task.h#L53
      * Can include it in current file.
-     * 
+     * Kernel hangs while using this method.
     */
     do{
         pr_info("[%d]: %s: %d\n", task->pid, task->comm, task->__state);

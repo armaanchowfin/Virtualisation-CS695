@@ -30,10 +30,12 @@ Approach 1: Traverse task_structs using list_head->next i.e. tasks->next
 Approach 2: Traverse processes using kernel-defined macros such as for_each_process or next_process().
 - Why is next_task() not just p->tasks->next?? why so many wrappers?
 
-First Build:
+Build Errors:
 ![errors](image.png)
 --> #include <linux/sched.h> does not recursively add linux/sched/task.h. Whats going on??
 -> sched.h DOES not include task.h !!! Thus it must be added independently.
+
+2. Kernel hangs if I run a raw do-while loop with next_task instead of using the for_each_process macro.
 
 Q2. Why arent macros included?
 -> 
@@ -42,3 +44,4 @@ Turns out, you have to use convenience macros, otherwise you get strange errors 
 
 `task_struct` in detail
 Q3. 
+
