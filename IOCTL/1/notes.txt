@@ -1,0 +1,6 @@
+plan: 
+0. userspace mallocs space for a single byte. 
+1. ioctl passes this va to the kernel, indicating a call to get_pa_from_va.
+driver reads the va via coopy-from-user, walks the pagetable of current and obtains kernel physical address of the pte + offset, and returns this value to userspace via copy-to-user.
+2. userspace passes this PA along with a value to ioctl. The aim is to set this byte of physical memory to the specified value.
+driver receives the physical address, and needs to update the ram somehow.

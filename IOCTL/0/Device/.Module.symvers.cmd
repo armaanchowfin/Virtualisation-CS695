@@ -1,0 +1,1 @@
+cmd_/home/cs695/_Armaan_Labs/Lab1/IOCTL/0/Device/Module.symvers :=  sed 's/ko$$/o/'  /home/cs695/_Armaan_Labs/Lab1/IOCTL/0/Device/modules.order | scripts/mod/modpost -m     -o /home/cs695/_Armaan_Labs/Lab1/IOCTL/0/Device/Module.symvers -e -i Module.symvers -T - 

@@ -1,0 +1,11 @@
+1. In normal circumstances i.e. without a userspace fork, does a single executable run as a single process
+even if it contains independent linked object files?
+- Yes. However the current situation, the goal is to establish a parent-child relationship between
+two independent processes via an ioctl call from the child.
+
+if (current is soldier):
+    current->ppid...
+else {
+    look for task struct with pid = soldierpid (sent from user)
+    for_each_process
+}

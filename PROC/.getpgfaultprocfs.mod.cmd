@@ -1,0 +1,1 @@
+cmd_/home/cs695/_Armaan_Labs/Lab1/PROC/getpgfaultprocfs.mod := printf '%s\n'   get_pgfault_procfs.o | awk '!x[$$0]++ { print("/home/cs695/_Armaan_Labs/Lab1/PROC/"$$0) }' > /home/cs695/_Armaan_Labs/Lab1/PROC/getpgfaultprocfs.mod
