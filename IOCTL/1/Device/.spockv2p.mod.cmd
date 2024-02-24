@@ -1,1 +1,0 @@
-cmd_/home/cs695/_Armaan_Labs/Lab1/IOCTL/1/Device/spockv2p.mod := printf '%s\n'   spockv2p_ioctl_driver.o | awk '!x[$$0]++ { print("/home/cs695/_Armaan_Labs/Lab1/IOCTL/1/Device/"$$0) }' > /home/cs695/_Armaan_Labs/Lab1/IOCTL/1/Device/spockv2p.mod

@@ -1,1 +1,0 @@
-cmd_/home/cs695/_Armaan_Labs/Lab1/IOCTL/0/Device/cret0.mod := printf '%s\n'   cret0_ioctl_driver.o | awk '!x[$$0]++ { print("/home/cs695/_Armaan_Labs/Lab1/IOCTL/0/Device/"$$0) }' > /home/cs695/_Armaan_Labs/Lab1/IOCTL/0/Device/cret0.mod

@@ -1,1 +1,0 @@
-cmd_/home/cs695/_Armaan_Labs/Lab1/IOCTL/0/Device/cret0.o := ld -m elf_x86_64 -z noexecstack --no-warn-rwx-segments   -r -o /home/cs695/_Armaan_Labs/Lab1/IOCTL/0/Device/cret0.o @/home/cs695/_Armaan_Labs/Lab1/IOCTL/0/Device/cret0.mod 
